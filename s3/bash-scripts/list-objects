@@ -1,1 +1,19 @@
 #!/usr/bin/env bash
+#!/usr/bin/env bash
+echo "List Objects"
+
+# Check for bucket name
+if [ -z "$1" ]; then
+    echo "There needs to be a bucket name eg. ./bucket my-bucket-name"
+    exit 1
+fi
+
+BUCKET_NAME=$1
+# REGION="us-east-1"  # Set the default region, or replace with desired region
+REGION="ca-central-1"  # Set the default region, or replace with desired region
+
+# Check for region-specific creation
+aws s3api list-objects-v2 \
+--bucket "$BUCKET_NAME" \
+
+echo "Bucket Deleted"
