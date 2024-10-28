@@ -5,6 +5,9 @@ tasks:
       sudo apt-get install tree
 
   # https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.4
+  # https://docs.aws.amazon.com/powershell/latest/userguide/pstools-getting-set-up-linux-mac.html
+  # https://docs.aws.amazon.com/powershell/latest/reference/
+
   - name: powershell
     before: |
       sudo apt-get update
@@ -16,6 +19,11 @@ tasks:
       sudo apt-get update
       sudo apt-get install -y powershell
       pwsh
+
+      Install-Module -Name AWS.Tools.Installer
+      Install-AWSToolsModule AWS.Tools.S3 -CleanUp
+
+
       
   # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
   - name: aws-cli
