@@ -15,6 +15,7 @@ tasks:
       rm packages-microsoft-prod.deb
       sudo apt-get update
       sudo apt-get install -y powershell
+      pwsh
       
   # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
   - name: aws-cli
