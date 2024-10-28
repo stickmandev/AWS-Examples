@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+echo "--put-object"
+
+# Check for bucket name
+if [ -z "$1" ]; then
+    echo "There needs to be a bucket name eg. ./bucket my-bucket-name"
+    exit 1
+fi
+
+BUCKET_NAME=$1
+
+# Replace with your bucket name
+BUCKET_NAME="your-bucket-name"
+
+echo "Deleting all objects from bucket: $BUCKET_NAME"
+
+aws s3 rm s3://$BUCKET_NAME --recursive
+
+echo "Deletion complete."
+
