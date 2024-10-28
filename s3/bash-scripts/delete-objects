@@ -9,8 +9,7 @@ fi
 
 BUCKET_NAME=$1
 
-# Replace with your bucket name
-BUCKET_NAME="your-bucket-name"
+echo $BUCKET_NAME
 
 echo "Deleting all objects from bucket: $BUCKET_NAME"
 
